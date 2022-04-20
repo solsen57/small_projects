@@ -24,8 +24,12 @@ def main():
                 i+=1
             else:
                 i+=1
-        print('There are {} prime numbers between 1 and {}'.format(len(primes),num))
-        print(primes)
+        if num == 2:
+            print('There is 1 prime number between 1 and 2')
+            print(primes)
+        else:
+            print(f'There are {len(primes)} prime numbers between 1 and {num}')
+            print(primes)
 
     #only accept positive integers
     while True:
@@ -47,23 +51,34 @@ def main():
 
         if gn_choice == 1:
             if isPrime(gn) == 1:
-                print('{} is a prime number!'.format(gn))
+                print(f'{gn} is a prime number!')
             else:
-                print('{} is not a prime number'.format(gn))
+                print(f'{gn} is not a prime number')
             break
         elif gn_choice == 2:
             listPrime(gn)
             break
         elif gn_choice == 3:
             if isPrime(gn) == 1:
-                print('{} is a prime number!'.format(gn))
+                print(f'{gn} is a prime number!')
             else:
-                print('{} is not a prime number'.format(gn))
+                print(f'{gn} is not a prime number')
             listPrime(gn)
             break
         else:
             print('Invalid input. \n')
             continue
 
+
 if __name__ == '__main__':
     main()
+    while True:
+        answer = input('\nWould you like to try another number? (y/n) ').lower()
+        if answer.startswith('y'):
+            main()
+        elif answer.startswith('n'):
+            print('Goodbye!')
+            exit()
+        else:
+            print('Invalid input. \n')
+            continue
