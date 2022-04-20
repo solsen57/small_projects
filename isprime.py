@@ -65,4 +65,5 @@ def main():
             print('Invalid input. \n')
             continue
 
-main()
+if __name__ == '__main__':
+    main()
