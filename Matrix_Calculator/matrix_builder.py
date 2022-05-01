@@ -28,3 +28,12 @@ def mult_matrix(n, M):
         i+=1
     M3 = M3.reshape(rw, cl)
     return M3
+
+def matrix_add(M1, M2):
+    cl = len(M1[0])
+    rw = len(M2)
+    M3 = bul_matrix(rw, cl)
+    for i in range(rw):
+        for j in range(cl):
+            M3[i][j] = M1[i][j] + M2[i][j]
+    return M3
