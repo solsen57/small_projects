@@ -30,3 +30,14 @@ entires = [input('Entry? ') for x in list]
 
 A1 = mb.fill_matrix(A, entires)
 print(A1)
+
+mul_ch = input('Is there a multiplier for your matrix? ').lower()
+if mul_ch.startswith('y'):
+    while True:
+        try:
+            mul = float(input('Please enter multiplier: '))
+            break
+        except ValueError:
+            print('Invalid input.')
+    A2 = mb.mult_matrix(mul, A1)
+    print(A2)

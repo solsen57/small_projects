@@ -2,7 +2,7 @@ import numpy as np
 
 def bul_matrix(rw, cl):
     c = rw*cl
-    M1 = np.arange(c)
+    M1 = np.zeros(c, dtype = 'float64')
     M1 = M1.reshape(rw, cl)
     return M1
 
