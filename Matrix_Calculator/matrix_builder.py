@@ -37,3 +37,27 @@ def matrix_add(M1, M2):
         for j in range(cl):
             M3[i][j] = M1[i][j] + M2[i][j]
     return M3
+
+def matrix_sub(M1, M2):
+    cl = len(M1[0])
+    rw = len(M2)
+    M3 = bul_matrix(rw, cl)
+    for i in range(rw):
+        for j in range(cl):
+            M3[i][j] = M1[i][j] - M2[i][j]
+    return M3
+
+def matrix_mul(M1, M2):
+    cl = len(M2[0])
+    rw = len(M1)
+    M3 = bul_matrix(rw, cl)
+    for i in range(rw):
+        for j in range(cl):
+            for k in range(len(M2)):
+                M3[i][j] += M1[i][k] * M2[k][j]
+    return M3
+
+t1 = [[1,2,3]]
+t2 = [[4],[5],[6]]
+t3 = matrix_mul(t1,t2)
+print(t3)
