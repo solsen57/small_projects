@@ -80,5 +80,6 @@ def matrix_mul_input():
         except:
             pass
 
-t3 = matrix_mul_input()
-print(t3)
+def main():
+    
+    pass

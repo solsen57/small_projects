@@ -56,8 +56,3 @@ def matrix_mul(M1, M2):
             for k in range(len(M2)):
                 M3[i][j] += M1[i][k] * M2[k][j]
     return M3
-
-t1 = [[1,2,3]]
-t2 = [[4],[5],[6]]
-t3 = matrix_mul(t1,t2)
-print(t3)
